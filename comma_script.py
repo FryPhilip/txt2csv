@@ -10,10 +10,10 @@ for str in f.read():
     else:
         fr.write(str)
     if counter >= 13:
-        print(counter)
         fr.write("\n")
         counter = 0
 
+fr.write(",")
         
 f.close()
 fr.close()
