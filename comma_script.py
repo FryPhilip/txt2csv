@@ -1,8 +1,7 @@
-f = open('ext_index.csv', 'r')
+f_read = open('ext_index.csv', 'r')
+##f_write = open('ext_index.csv', 'w')
 
+line = f_read.readline()
 
-line = f.readline()
-
-for line in f:
-    for str in line:
-        print(str)
+for str in f_read:
+    print(str)
