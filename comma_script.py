@@ -1,16 +1,17 @@
-f = open('test.txt', 'r')
-fr = open('out.txt', 'w')
+f = open('ext_index.csv', 'r')
+fr = open('out.csv', 'w')
 
-line = f.readline()
-
-for str in line:
+for str in f.read():
+    counter = 0
     for chrr in str:
         if chrr.isspace():
             fr.write(",")
-            print(2)
+            counter += 1
         else:
             fr.write(chrr)
-            print(1)
+        if counter >= 13:
+            print(counter)
+            fr.write("\n")
         
 f.close()
 fr.close()
