@@ -1,11 +1,16 @@
-f_read = open('ext_index.csv', 'r')
-##f_write = open('ext_index.csv', 'w')
+f = open('test.txt', 'r')
+fr = open('out.txt', 'w')
 
-line = f_read.readline()
+line = f.readline()
 
-for str in f_read:
+for str in line:
     for chrr in str:
         if chrr.isspace():
-            print("is space")
+            fr.write(",")
+            print(2)
         else:
-            print(chrr)
+            fr.write(chrr)
+            print(1)
+        
+f.close()
+fr.close()
