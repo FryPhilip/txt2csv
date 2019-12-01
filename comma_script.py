@@ -4,4 +4,8 @@ f_read = open('ext_index.csv', 'r')
 line = f_read.readline()
 
 for str in f_read:
-    print(str)
+    for chrr in str:
+        if chrr.isspace():
+            print("is space")
+        else:
+            print(chrr)
